@@ -1,0 +1,81 @@
+.orderCard {
+  display: grid;
+  grid-template-columns: 0.4fr 1fr 0.5fr;
+  padding: 10px 0;
+  gap: 15px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.orderImage {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.orderDetail {
+  line-height: 25px;
+}
+
+.itemName {
+  font-size: 16.5px;
+  /* padding-bottom: 50px; */
+}
+
+.options {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.options > strong {
+  font-size: 16.5px;
+  cursor: pointer;
+}
+
+.btns {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.btns > button {
+  height: 18px;
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  padding: 1.5px 3px;
+  border: none;
+  color: white;
+  background-color: var(--yellow);
+  cursor: pointer;
+}
+
+.btns > button:nth-child(1) {
+  padding: 0 6px;
+}
+
+.btns > .disabled {
+  background-color: var(--grey);
+}
+
+.orderDetail > input {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  border: 2px solid var(--grey);
+  border-radius: 10px;
+  background-color: transparent;
+  margin-left: 10px;
+}
+
+.orderPrice {
+  text-align: center;
+}
+
+@media screen and (max-width: 680px) {
+  .orderCard {
+    grid-template-columns: 0.3fr 1fr 0.5fr;
+  }
+}

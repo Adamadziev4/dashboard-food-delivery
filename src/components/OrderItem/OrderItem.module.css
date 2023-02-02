@@ -1,0 +1,24 @@
+.orderItem {
+  width: 350px;
+  margin-top: 20px;
+  position: relative;
+  display: flex;
+  grid-gap: 15px;
+}
+
+.imgUrlName {
+  display: flex;
+  align-items: center;
+  grid-gap: 20px;
+  width: 265px;
+}
+
+.imgUrlName img {
+  border-radius: 15px;
+}
+
+.countPrice {
+  display: flex;
+  align-items: center;
+  grid-gap: 25px;
+}

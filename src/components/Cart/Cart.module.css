@@ -1,0 +1,120 @@
+.dashboardOrder {
+  display: grid;
+  width: 440px;
+  min-height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 0.5rem 1.5rem;
+  background-color: var(--mainColor);
+  z-index: 3;
+}
+
+.dashboardOrder > h3 {
+  padding: 10px 0;
+}
+
+.dashboardAdress > h4 {
+  line-height: 2;
+}
+
+.orderTime {
+  font-size: 0.8rem;
+  color: var(--darkGrey);
+}
+
+.orderWrapper {
+  height: 60vh;
+  width: 100%;
+  overflow-y: scroll;
+  margin: 20px 0;
+}
+
+/* Custom scroll */
+
+.orderWrapper::-webkit-scrollbar {
+  width: 7px;
+}
+
+.orderWrapper::-webkit-scrollbar-track {
+  background-color: var(--lightGrey);
+  border-radius: 20px;
+}
+
+.orderWrapper::-webkit-scrollbar-thumb {
+  background-color: var(--darkGrey);
+  border-radius: 20px;
+}
+
+.divider {
+  width: 100%;
+  border: 1px dashed var(--grey);
+}
+
+.orderTotal > p {
+  padding: 7px 0;
+}
+
+.orderTotal > p > span {
+  float: right;
+  font-weight: 600;
+}
+
+.orderPromo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--lightGrey);
+  border: 2px solid var(--grey);
+  border-radius: 10px;
+  height: 45px;
+  padding: 0 5px;
+  margin: 5px 0 10px 0;
+}
+
+.inputPromo {
+  height: 100%;
+  background-color: transparent;
+  border: none;
+}
+
+.buttonPromo {
+  float: right;
+  background-color: var(--yellow);
+  border: none;
+  border-radius: 5px;
+  height: 70%;
+  width: 30%;
+  cursor: pointer;
+}
+
+.orderTotal > .totalPrice {
+  padding: 15px 0;
+}
+
+.checkout {
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  background-color: var(--red);
+  border: none;
+  border-radius: 20px;
+  color: var(--lightGrey);
+  cursor: pointer;
+}
+
+.checkout:hover {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 680px) {
+  .dashboardOrder {
+    width: 100%;
+    left: 0;
+  }
+
+  .orderCard {
+    grid-template-columns: 0.3fr 1fr 0.5fr;
+  }
+}

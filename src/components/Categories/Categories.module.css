@@ -1,0 +1,27 @@
+.dashboardMenu {
+  display: flex;
+  gap: 10px;
+  /* padding: 1rem 1rem; */
+  overflow-x: auto;
+}
+
+.dashboardMenu > span {
+  text-decoration: noneя;
+  text-align: center;
+  border-radius: 20px;
+  min-width: 120px;
+  padding: 0.5rem 0;
+  font-size: 0.9rem;
+  color: var(--darkBlack);
+  background-color: var(--lightGrey);
+  cursor: pointer;
+}
+
+.dashboardMenu > span.active {
+  background-color: var(--yellow);
+  color: white;
+}
+
+/* .dashboardMenu > span:hover {
+  background-color: var(--yellow);
+} */

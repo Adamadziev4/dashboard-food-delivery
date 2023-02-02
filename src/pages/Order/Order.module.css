@@ -1,0 +1,57 @@
+.order {
+  padding-top: 120px;
+  display: flex;
+  justify-content: center;
+}
+
+.orderGrid {
+  width: 1440px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.orderGrid.empty {
+  grid-template-columns: 1fr;
+}
+
+.emptyOrder {
+  padding-top: 100px;
+  text-align: center;
+  /* align-self: center; */
+}
+
+.emptyOrder button {
+  margin-top: 15px;
+  padding: 7px 10px;
+  border: none;
+  /* border: 1px solid rgba(0, 0, 0, 0.3); */
+  background-color: var(--yellow);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.emptyOrder button:hover {
+  background-color: var(--yellowHover);
+}
+
+ul {
+  position: relative;
+  list-style-type: none;
+}
+
+.orderItem {
+  position: relative;
+}
+
+.orderItem::after {
+  position: absolute;
+  content: "";
+  left: 5px;
+  bottom: -10px;
+  width: 345px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.orderItem:nth-last-child(1)::after {
+  display: none;
+}

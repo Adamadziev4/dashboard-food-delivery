@@ -1,0 +1,23 @@
+.logo {
+  position: fixed;
+  background-color: var(--darkBlack);
+  color: var(--lightGrey);
+  width: 100%;
+  text-align: center;
+  padding: 15px 420px 15px 60px;
+  top: 0;
+  z-index: 2;
+}
+
+.labelCart {
+  position: fixed;
+  top: 15px;
+  right: 25px;
+  z-index: 4;
+  cursor: pointer;
+  color: var(--lightGrey);
+}
+
+.labelCart.active {
+  color: var(--darkBlack);
+}

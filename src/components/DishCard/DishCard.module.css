@@ -1,0 +1,82 @@
+.dashboardCard {
+  /* background-color: var(--mainColor); */
+  /* background-color: rgba(0, 0, 0, 0); */
+  display: grid;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 15px;
+}
+
+.dashboardCard:hover {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px;
+}
+
+.cardImage {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.cardDetail {
+  display: grid;
+  padding: 10px;
+}
+
+/* .cardDetail > h4 > span {
+  float: right;
+} */
+
+.cardTime {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  color: var(--darkGrey);
+  font-size: 0.8rem;
+  padding-top: 10px;
+  /* height: 62px; */
+}
+
+.namePrice {
+  /* align-items: flex-start; */
+}
+
+.addBtn {
+  background-color: var(--yellow);
+  color: white;
+  border: none;
+  padding: 6px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cardBtns {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+}
+
+.cardBtns > button {
+  background-color: var(--yellow);
+  color: white;
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.cardBtns > button:nth-child(1) {
+  padding: 6px 8px;
+}
+
+.namePrice {
+  display: flex;
+  justify-content: space-between;
+}
+
+.namePrice span {
+  min-width: 50px;
+}
