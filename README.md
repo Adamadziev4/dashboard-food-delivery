@@ -26,30 +26,18 @@
 
 ## Скриншоты
 
-![Screenshot](https://github.com/Adamadziev4/react-foodhub/blob/main/public/images/Foodhub-1.png)
+![Screenshot](https://github.com/Adamadziev4/dashboard-food-delivery/blob/main/public/images/screenshots/1.png)
 
 ---
 
-![Screenshot](https://github.com/Adamadziev4/react-foodhub/blob/main/public/images/Foodhub-2.png)
+![Screenshot](https://github.com/Adamadziev4/dashboard-food-delivery/blob/main/public/images/screenshots/1.png)
 
 ---
 
-![Screenshot](https://github.com/Adamadziev4/react-foodhub/blob/main/public/images/Foodhub-3.png)
+![Screenshot](https://github.com/Adamadziev4/dashboard-food-delivery/blob/main/public/images/screenshots/1.png)
 
 ---
 
-![Screenshot](https://github.com/Adamadziev4/react-foodhub/blob/main/public/images/Foodhub-4.png)
-
----
-
-![Screenshot](https://github.com/Adamadziev4/react-foodhub/blob/main/public/images/Foodhub-5.png)
-
----
-
-![Screenshot](https://github.com/Adamadziev4/react-foodhub/blob/main/public/images/Foodhub-6.png)
-
----
-
-![Screenshot](https://github.com/Adamadziev4/react-foodhub/blob/main/public/images/Foodhub-7.png)
+![Screenshot](https://github.com/Adamadziev4/dashboard-food-delivery/blob/main/public/images/screenshots/1.png)
 
 ---
