@@ -6,11 +6,15 @@ import type { ICartItem } from "../../types";
 export interface CartItems {
   cartItems: ICartItem[];
   totalPrice: number;
+  deliveryPrice: number;
+  discount: number;
 }
 
 const initialState: CartItems = {
   cartItems: [],
   totalPrice: 0,
+  deliveryPrice: 100,
+  discount: 0,
 };
 
 export const cartItems = createSlice({
@@ -20,6 +24,7 @@ export const cartItems = createSlice({
     addItem: (state, action: PayloadAction<ICartItem>) => {
       state.cartItems.push(action.payload);
       state.totalPrice += action.payload.price;
+      state.discount = state.totalPrice * 0.1;
     },
     incItemById: (state, action: PayloadAction<number>) => {
       const findItem = state.cartItems.find(
@@ -37,6 +42,7 @@ export const cartItems = createSlice({
 
       if (findItem) {
         state.totalPrice += findItem.price;
+        state.discount = state.totalPrice * 0.1;
       }
     },
     decItemById: (state, action: PayloadAction<number>) => {
@@ -60,6 +66,7 @@ export const cartItems = createSlice({
           });
         }
         state.totalPrice -= findItem.price;
+        state.discount = state.totalPrice * 0.1;
       }
     },
     setCountById: (
@@ -82,6 +89,7 @@ export const cartItems = createSlice({
       );
 
       state.totalPrice = totalPrice;
+      state.discount = state.totalPrice * 0.1;
       state.cartItems = filterItems;
     },
     deleteItemById: (state, action: PayloadAction<number>) => {
@@ -92,6 +100,7 @@ export const cartItems = createSlice({
         (totalPrice, cartItem) => totalPrice + cartItem.price * cartItem.count,
         0
       );
+      state.discount = state.totalPrice * 0.1;
 
       // Убавлять totalPrice
     },

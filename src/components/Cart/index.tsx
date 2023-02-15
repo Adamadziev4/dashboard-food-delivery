@@ -7,12 +7,9 @@ import { CartItem } from "../CartItem";
 import styles from "./Cart.module.css";
 
 export const Cart: React.FC = () => {
-  const { cartItems, totalPrice } = useSelector(
+  const { cartItems, totalPrice, deliveryPrice, discount } = useSelector(
     (state: RootState) => state.cartItems
   );
-
-  const deliveryPrice = 100;
-  const discount = totalPrice * 0.1;
 
   return (
     <div className={styles.dashboardOrder}>

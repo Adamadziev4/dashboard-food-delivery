@@ -46,10 +46,9 @@ export const Dashboard: React.FC = () => {
           <img src="/images/banner.webp" alt="banner" />
           <div className={styles.bannerPromo}>
             <h1>
-              <span>50 OFF</span>
+              <span>СКИДКА 15%</span>
               <br />
-              Tasty Food <br />
-              On Your Hand
+              Вкусная еда <br />В ваши руках
             </h1>
           </div>
         </div>

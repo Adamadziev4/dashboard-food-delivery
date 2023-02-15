@@ -6,7 +6,9 @@ import { AppDispatch, RootState } from "../../redux/store";
 import styles from "./Form.module.css";
 
 export const Form: React.FC = () => {
-  const { cartItems } = useSelector((state: RootState) => state);
+  const { totalPrice, deliveryPrice, discount } = useSelector(
+    (state: RootState) => state.cartItems
+  );
   const dispatch = useDispatch<AppDispatch>();
 
   const [isCashPay, setIsCashPay] = React.useState<boolean>(true);
@@ -17,7 +19,7 @@ export const Form: React.FC = () => {
     formState: { errors },
     reset,
   } = useForm({
-    mode: "onChange",
+    mode: "onSubmit",
   });
 
   const onClickCashPay = () => {
@@ -37,7 +39,7 @@ export const Form: React.FC = () => {
         <section className={styles.namePhone}>
           <div>
             <p>
-              Name{" "}
+              Имя{" "}
               <strong className={errors.name ? styles.error : null}>*</strong>
             </p>
             <input
@@ -50,11 +52,12 @@ export const Form: React.FC = () => {
           </div>
           <div>
             <p>
-              Phone{" "}
+              Телефон{" "}
               <strong className={errors.phone ? styles.error : null}>*</strong>
               <span className={styles.error}>
-                {errors.phone?.type === "pattern" &&
-                  "Некорректный номер телефона"}
+                {errors.phone?.type === "pattern" && (
+                  <small>"Некорректный номер телефона"</small>
+                )}
               </span>
             </p>
             <input
@@ -76,7 +79,7 @@ export const Form: React.FC = () => {
           {/* <h4 className={styles.deliveryText}>Delivery</h4> */}
           <div className={styles.city}>
             <p>
-              City{" "}
+              Город{" "}
               <strong className={errors.city ? styles.error : null}>*</strong>
             </p>
             <input
@@ -89,7 +92,7 @@ export const Form: React.FC = () => {
           </div>
           <div className={styles.street}>
             <p>
-              Street{" "}
+              Улица{" "}
               <strong className={errors.street ? styles.error : null}>*</strong>
             </p>
             <input
@@ -103,7 +106,7 @@ export const Form: React.FC = () => {
           <div className={styles.houseFlat}>
             <div className={styles.house}>
               <p>
-                House{" "}
+                Дом{" "}
                 <strong className={errors.house ? styles.error : null}>
                   *
                 </strong>
@@ -118,7 +121,7 @@ export const Form: React.FC = () => {
               />
             </div>
             <div className={styles.flat}>
-              <p>Flat</p>
+              <p>Квартира</p>
               <input
                 {...register("flat", {
                   // value: user.isSucsess ? user.personalData?.flat : "",
@@ -140,7 +143,7 @@ export const Form: React.FC = () => {
           />
         </section>
         <section className={styles.pay}>
-          <h4 className={styles.payTitle}>Pay method</h4>
+          <h4 className={styles.payTitle}>Оплата</h4>
           <div className={styles.cash}>
             <label htmlFor="cash" onClick={onClickCashPay}>
               <input
@@ -150,7 +153,7 @@ export const Form: React.FC = () => {
                 id="cash"
                 name="pay"
               />
-              Cash
+              Наличными
             </label>
           </div>
           <div className={styles.online}>
@@ -162,13 +165,13 @@ export const Form: React.FC = () => {
                 id="online"
                 name="pay"
               />
-              Online
+              Перевод курьеру
             </label>
           </div>
         </section>
         <section className={styles.total}>
-          <span>Total payable: {cartItems.totalPrice}$</span>
-          <button>Pay</button>
+          <span>Сумма к оплате: {totalPrice + deliveryPrice - discount} ₽</span>
+          <button>Оплатить</button>
         </section>
       </form>
     </>
