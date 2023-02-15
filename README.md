@@ -30,14 +30,14 @@
 
 ---
 
-![Screenshot](https://github.com/Adamadziev4/dashboard-food-delivery/blob/main/public/images/screenshots/1.png)
+![Screenshot](https://github.com/Adamadziev4/dashboard-food-delivery/blob/main/public/images/screenshots/2.png)
 
 ---
 
-![Screenshot](https://github.com/Adamadziev4/dashboard-food-delivery/blob/main/public/images/screenshots/1.png)
+![Screenshot](https://github.com/Adamadziev4/dashboard-food-delivery/blob/main/public/images/screenshots/3.png)
 
 ---
 
-![Screenshot](https://github.com/Adamadziev4/dashboard-food-delivery/blob/main/public/images/screenshots/1.png)
+![Screenshot](https://github.com/Adamadziev4/dashboard-food-delivery/blob/main/public/images/screenshots/4.png)
 
 ---
